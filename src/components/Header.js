@@ -11,11 +11,7 @@ const Header = () => {
       <View style={styles.AppNameWrapper}>
           <Text style={{fontSize:width/10,color:"#194D33"}}>Foreign</Text>
       </View>
-      <View style={styles.HeaderCalculateWrapper}>
-          <TouchableOpacity onPress={()=>Navigation.navigate("Calculate")}>
-              <Text style={{color:"#194D33"}}>Calculate</Text>
-          </TouchableOpacity>
-      </View>
+      
     </SafeAreaView>
   )
 }

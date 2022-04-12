@@ -8,16 +8,16 @@ const {width,height}=Dimensions.get("screen");
 
 const CurrencyCard=(props)=>{
     const Navigation=useNavigation();
-    const {buying,selling}=props;
+    const {name,buying,selling}=props;
     return(
-        <TouchableOpacity onPress={()=>Navigation.navigate("Calculate",({buying,selling}))} activeOpacity={0.8} style={styles.CurrencyCardMainWrapper}>
+        <TouchableOpacity onPress={()=>Navigation.navigate("Calculate",({buying,selling,name}))} activeOpacity={0.8} style={styles.CurrencyCardMainWrapper}>
             <View style={styles.CurrencyNameBox}>
                 <Text style={{fontSize:width/20,color:"gainsboro"}}>{props.name}</Text>
                 <Text style={{fontSize:width/28, color:"#1273DE"}}>{props.title}</Text>
             </View>
             <View style={styles.CurrencyBox}>
-                <Text style={{fontSize:width/18,color:"red"}}>{buying}</Text>
-                <Text style={{fontSize:width/18,color:"green"}}>{selling}</Text>
+                <Text style={{fontSize:width/18,color:"red"}}>{Number(buying).toFixed(3)}</Text>
+                <Text style={{fontSize:width/18,color:"green"}}>{Number(selling).toFixed(3)}</Text>
             </View>
         </TouchableOpacity>
     )

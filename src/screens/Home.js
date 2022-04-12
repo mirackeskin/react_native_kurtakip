@@ -27,10 +27,3 @@ const styles = StyleSheet.create({
 
 
 
-/*
-{
-                        context.response.TCMB_AnlikKurBilgileri.map(item=>(
-                            <Text>{item.ForexBuying}</Text>
-                        ))
-                    }
-*/
